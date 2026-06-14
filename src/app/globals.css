@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --alfa-gold: #FFD700;
+  --alfa-gray-50: #F9F9F9;
+  --alfa-gray-100: #F5F5F7;
+}
+
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Sidebar Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-full hover:bg-gray-300 transition-colors;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-alfa-gold text-black font-bold rounded-none hover:bg-black hover:text-alfa-gold transition-all duration-300 uppercase tracking-widest text-sm;
+  }
+  
+  .btn-outline {
+    @apply px-8 py-4 border-2 border-black text-black font-bold rounded-none hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-widest text-sm;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20 lg:py-32;
+  }
+
+  /* Large Editorial Typography */
+  .h1 {
+    @apply text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter leading-[0.8] uppercase;
+  }
+
+  .h2 {
+    @apply text-4xl md:text-6xl font-black tracking-tight mb-8 uppercase leading-none;
+  }
+
+  /* Glass Effects */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/80 backdrop-blur-md border border-white/10;
+  }
+}
+
+/* Precision Motion Utilities */
+.mask-reveal {
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-size: 100% 200%;
+  mask-position: 0 0;
+}

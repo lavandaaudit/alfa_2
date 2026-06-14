@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Media Group Ltd — Premium Printing & Merchandise Production</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#EAB308',
+                        'gold-light': '#FDE047',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in { animation: fadeIn 0.5s ease forwards; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: translateX(0); } }
+        .slide-in { animation: slideIn 0.25s ease forwards; }
+        .hero-img-slide { transition: opacity 1s ease; }
+        .section-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+        .builder-sidebar { background: #111; }
+        .builder-canvas { background: #1a1a1a; background-image: radial-gradient(circle, #333 1px, transparent 1px); background-size: 28px 28px; }
+        .builder-summary { background: #111; }
+    </style>
+</head>
+<body class="bg-white text-black font-sans antialiased overflow-x-hidden">
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all">
+    <div class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between gap-8">
+        <a href="#" class="flex items-center gap-2.5 shrink-0">
+            <div class="w-8 h-8 bg-black flex items-center justify-center hover:bg-gold transition-colors">
+                <span class="text-gold font-black text-base leading-none group-hover:text-black">A</span>
+            </div>
+            <div class="leading-none">
+                <div class="font-black text-sm uppercase tracking-tight">Alfa Media Group Ltd</div>
+                <div class="text-[8px] text-gray-400 font-bold tracking-[0.2em] uppercase flex items-center gap-1 mt-0.5">
+                    🇺🇦 🇺🇸 🇬🇧 🇮🇱
+                </div>
+            </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-500">
+            <a href="#" class="text-black border-b-2 border-gold pb-0.5">Home</a>
+            <a href="#services" class="hover:text-black transition-colors">Services</a>
+            <a href="#industries" class="hover:text-black transition-colors">Industries</a>
+            <a href="#portfolio" class="hover:text-black transition-colors">Portfolio</a>
+            <a href="#about" class="hover:text-black transition-colors">About Us</a>
+            <a href="#builder" onclick="openBuilder(); return false;" class="hover:text-black transition-colors">Merch Builder</a>
+            <a href="#" class="hover:text-black transition-colors">Blog</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <a href="#contact" class="bg-gold text-black px-5 py-2.5 text-[11px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">Contact Us</a>
+            <span class="text-[11px] font-bold text-gray-400 hidden xl:block">EN</span>
+        </div>
+    </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero" class="pt-16 min-h-screen flex items-center bg-white relative overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center py-20">
+
+        <div class="space-y-8 fade-in">
+            <h1 class="text-5xl md:text-6xl xl:text-7xl font-black tracking-tight leading-[0.9] text-black">
+                Premium Printing &<br>
+                Merchandise Production<br>
+                for <span class="text-gold">European Businesses</span>
+            </h1>
+            <p class="text-gray-500 text-base leading-relaxed max-w-lg font-medium">
+                We help companies, agencies and organisations create high-quality, branded materials and merchandise that leave a lasting impression.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#services" class="bg-gold text-black px-8 py-4 text-[11px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-lg">Explore Services</a>
+                <a href="#builder" onclick="openBuilder(); return false;" class="border-2 border-black text-black px-8 py-4 text-[11px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">Build Your Kit</a>
+            </div>
+            <div class="flex items-center gap-4 pt-4">
+                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Trusted by companies and organisations across Europe, USA, Israel and Ukraine</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <span class="text-2xl">🇪🇺</span>
+                <span class="text-2xl">🇺🇸</span>
+                <span class="text-2xl">🇬🇧</span>
+                <span class="text-2xl">🇮🇱</span>
+                <span class="text-2xl">🇺🇦</span>
+            </div>
+        </div>
+
+        <!-- Hero Image Slider -->
+        <div class="relative">
+            <div id="hero-slider" class="aspect-[5/4] relative overflow-hidden bg-gray-50">
+                <!-- Slides will auto-rotate every 10 seconds (photos AND videos) -->
+                <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="">
+                </div>
+                <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="">
+                </div>
+                <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="">
+                </div>
+                <!-- Indicator dots -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    <span class="slide-dot w-8 h-1 bg-gold"></span>
+                    <span class="slide-dot w-2 h-1 bg-white/40"></span>
+                    <span class="slide-dot w-2 h-1 bg-white/40"></span>
+                </div>
+            </div>
+            <!-- Gold accent card -->
+            <div class="absolute -top-5 -right-5 bg-gold p-5 shadow-2xl hidden xl:block">
+                <p class="text-[9px] font-black uppercase tracking-widest opacity-60">Quality Index</p>
+                <p class="text-3xl font-black">98.4%</p>
+                <p class="text-[8px] font-bold opacity-60 uppercase">On-time delivery</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PRODUCTION SERVICES
+══════════════════════════════════════════ -->
+<section id="services" class="py-16 bg-gray-50 border-t border-b border-gray-100">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
+            <h2 class="text-2xl font-black uppercase tracking-tight">Our Production Services</h2>
+            <span class="text-[10px] font-bold text-gold uppercase tracking-[0.3em]">Full-Cycle Production</span>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="group p-6 bg-white border border-gray-100 hover:border-black hover:shadow-lg transition-all cursor-pointer">
+                <div class="w-10 h-10 bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors">
+                    <i data-lucide="printer" class="w-5 h-5 text-gray-600 group-hover:text-black"></i>
+                </div>
+                <h3 class="font-black text-sm uppercase tracking-tight mb-2">Printing</h3>
+                <p class="text-[10px] text-gray-400 font-medium uppercase leading-relaxed">Offset, Digital, Wide Format, UV</p>
+            </div>
+            <div class="group p-6 bg-white border border-gray-100 hover:border-black hover:shadow-lg transition-all cursor-pointer">
+                <div class="w-10 h-10 bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 text-gray-600 group-hover:text-black"></i>
+                </div>
+                <h3 class="font-black text-sm uppercase tracking-tight mb-2">Merchandise</h3>
+                <p class="text-[10px] text-gray-400 font-medium uppercase leading-relaxed">Branded merchandise for events</p>
+            </div>
+            <div class="group p-6 bg-white border border-gray-100 hover:border-black hover:shadow-lg transition-all cursor-pointer">
+                <div class="w-10 h-10 bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors">
+                    <i data-lucide="package" class="w-5 h-5 text-gray-600 group-hover:text-black"></i>
+                </div>
+                <h3 class="font-black text-sm uppercase tracking-tight mb-2">Packaging</h3>
+                <p class="text-[10px] text-gray-400 font-medium uppercase leading-relaxed">Custom packaging design &amp; die-cut</p>
+            </div>
+            <div class="group p-6 bg-white border border-gray-100 hover:border-black hover:shadow-lg transition-all cursor-pointer">
+                <div class="w-10 h-10 bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors">
+                    <i data-lucide="scissors" class="w-5 h-5 text-gray-600 group-hover:text-black"></i>
+                </div>
+                <h3 class="font-black text-sm uppercase tracking-tight mb-2">Finishing</h3>
+                <p class="text-[10px] text-gray-400 font-medium uppercase leading-relaxed">Binding, foil, custom die-cut</p>
+            </div>
+            <div class="group p-6 bg-white border border-gray-100 hover:border-black hover:shadow-lg transition-all cursor-pointer">
+                <div class="w-10 h-10 bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-gray-600 group-hover:text-black"></i>
+                </div>
+                <h3 class="font-black text-sm uppercase tracking-tight mb-2">Personalization</h3>
+                <p class="text-[10px] text-gray-400 font-medium uppercase leading-relaxed">Automation, UV printing, gifts</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- STATS BAR -->
+<div class="bg-black py-5 overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 flex flex-wrap items-center justify-between gap-6">
+        <div class="text-center">
+            <span class="text-gold text-2xl font-black">12</span>
+            <span class="text-white/40 text-[9px] font-black uppercase tracking-widest ml-2">Years Experience</span>
+        </div>
+        <div class="text-center">
+            <span class="text-gold text-2xl font-black">98.4%</span>
+            <span class="text-white/40 text-[9px] font-black uppercase tracking-widest ml-2">Quality Rating</span>
+        </div>
+        <div class="text-center">
+            <span class="text-gold text-2xl font-black">4</span>
+            <span class="text-white/40 text-[9px] font-black uppercase tracking-widest ml-2">Production Offices</span>
+        </div>
+        <div class="text-center">
+            <span class="text-gold text-2xl font-black">150</span>
+            <span class="text-white/40 text-[9px] font-black uppercase tracking-widest ml-2">QA Staff</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- WE WORK WITH -->
+<section class="py-14 border-b border-gray-100">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 mb-10">We Work With</h3>
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center group-hover:bg-gold transition-colors border border-gray-100">
+                    <i data-lucide="calendar" class="w-6 h-6 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] uppercase font-black tracking-wider text-gray-500 text-center">Conferences<br>&amp; Events</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center group-hover:bg-gold transition-colors border border-gray-100">
+                    <i data-lucide="rocket" class="w-6 h-6 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] uppercase font-black tracking-wider text-gray-500 text-center">Startups<br>&amp; Scaleups</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center group-hover:bg-gold transition-colors border border-gray-100">
+                    <i data-lucide="monitor" class="w-6 h-6 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] uppercase font-black tracking-wider text-gray-500 text-center">SaaS &amp;<br>Tech</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center group-hover:bg-gold transition-colors border border-gray-100">
+                    <i data-lucide="heart" class="w-6 h-6 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] uppercase font-black tracking-wider text-gray-500 text-center">NGOs &amp;<br>Foundations</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center group-hover:bg-gold transition-colors border border-gray-100">
+                    <i data-lucide="graduation-cap" class="w-6 h-6 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] uppercase font-black tracking-wider text-gray-500 text-center">Universities<br>&amp; Education</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center group-hover:bg-gold transition-colors border border-gray-100">
+                    <i data-lucide="building-2" class="w-6 h-6 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] uppercase font-black tracking-wider text-gray-500 text-center">Corporate<br>Companies</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOUR CORE INDUSTRIES
+══════════════════════════════════════════ -->
+<section id="industries" class="py-24 bg-white">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-end mb-20">
+            <div>
+                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-gold mb-6">Platform Markets</p>
+                <h2 class="section-title">Four Core<br>Industries</h2>
+            </div>
+            <p class="text-gray-400 text-sm font-medium leading-relaxed max-w-md ml-auto">
+                We don't build catalogues. We build platforms — tailored by vertical, priced by logic, delivered on schedule.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group border border-gray-100 hover:border-black p-10 transition-all cursor-pointer">
+                <div class="w-12 h-12 bg-gray-50 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors">
+                    <i data-lucide="calendar-days" class="w-5 h-5 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] font-black text-gray-300 uppercase tracking-widest mb-2 block">01</span>
+                <h3 class="text-xl font-black uppercase tracking-tight mb-4 leading-tight">Events &amp;<br>Conferences</h3>
+                <p class="text-[10px] text-gray-400 uppercase font-medium leading-relaxed mb-8">Complete branded kits for summits, expos and large-scale corporate events across Europe.</p>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Badge</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Lanyard</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Tote</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Notebook</span>
+                </div>
+            </div>
+            <div class="group border border-gray-100 hover:border-black p-10 transition-all cursor-pointer">
+                <div class="w-12 h-12 bg-gray-50 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors">
+                    <i data-lucide="briefcase" class="w-5 h-5 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] font-black text-gray-300 uppercase tracking-widest mb-2 block">02</span>
+                <h3 class="text-xl font-black uppercase tracking-tight mb-4 leading-tight">Corporate<br>&amp; HR</h3>
+                <p class="text-[10px] text-gray-400 uppercase font-medium leading-relaxed mb-8">Onboarding welcome kits, premium gifting programs and team identity merchandise.</p>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Welcome Kit</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Hoodie</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Gift Box</span>
+                </div>
+            </div>
+            <div class="group border border-gray-100 hover:border-black p-10 transition-all cursor-pointer">
+                <div class="w-12 h-12 bg-gray-50 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors">
+                    <i data-lucide="megaphone" class="w-5 h-5 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] font-black text-gray-300 uppercase tracking-widest mb-2 block">03</span>
+                <h3 class="text-xl font-black uppercase tracking-tight mb-4 leading-tight">Marketing<br>&amp; Agencies</h3>
+                <p class="text-[10px] text-gray-400 uppercase font-medium leading-relaxed mb-8">Promotional campaign runs for creative studios, media agencies and brand launches.</p>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">T-Shirt</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Cap</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Stickers</span>
+                </div>
+            </div>
+            <div class="group border border-gray-100 hover:border-black p-10 transition-all cursor-pointer">
+                <div class="w-12 h-12 bg-gray-50 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors">
+                    <i data-lucide="box" class="w-5 h-5 text-gray-500 group-hover:text-black"></i>
+                </div>
+                <span class="text-[9px] font-black text-gray-300 uppercase tracking-widest mb-2 block">04</span>
+                <h3 class="text-xl font-black uppercase tracking-tight mb-4 leading-tight">Packaging<br>&amp; E-commerce</h3>
+                <p class="text-[10px] text-gray-400 uppercase font-medium leading-relaxed mb-8">Custom delivery branding: boxes, tape, inserts and unboxing experience design.</p>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Box</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Tape</span>
+                    <span class="px-2 py-1 bg-gray-100 text-[8px] font-black uppercase">Inserts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     KIT BUILDER TRIGGER
+══════════════════════════════════════════ -->
+<section id="builder-preview" class="py-20 bg-black text-white">
+    <div class="max-w-[1440px] mx-auto px-6 text-center space-y-8">
+        <span class="text-gold text-[10px] font-black uppercase tracking-[0.4em]">Merch Builder v2.4 Configurator</span>
+        <h2 class="text-6xl md:text-7xl font-black tracking-tight leading-none">Build Your Kit.<br><em class="text-gray-600 font-black text-4xl not-italic">with your branding</em></h2>
+        <p class="text-gray-500 text-sm max-w-xl mx-auto font-medium">Select products on the left. Watch your kit assemble. See pricing update in real time.</p>
+        <button onclick="openBuilder()" class="inline-flex items-center gap-3 bg-gold text-black px-10 py-5 font-black uppercase text-[11px] tracking-widest hover:bg-white transition-all shadow-2xl">
+            <i data-lucide="settings-2" class="w-4 h-4"></i>
+            Open Kit Configurator
+        </button>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     BUILDER MODAL (FULLSCREEN)
+══════════════════════════════════════════ -->
+<div id="builder-modal" class="fixed inset-0 z-[200] bg-white hidden flex-col">
+
+    <!-- Builder Top Bar -->
+    <div class="bg-black h-16 flex items-center justify-between px-6 shrink-0">
+        <div class="flex items-center gap-6">
+            <div>
+                <div class="text-gold text-[10px] font-black uppercase tracking-widest italic">Merch Builder v2.4</div>
+                <div id="builder-mode-label" class="text-white text-xs font-bold uppercase tracking-tight">Kit Configurator</div>
+            </div>
+            <div class="h-6 w-px bg-white/10 hidden md:block"></div>
+            <div class="hidden md:flex gap-2">
+                <button id="btn-catalog" onclick="setBuilderMode('catalog')" class="px-4 py-2 bg-gold text-black text-[9px] font-black uppercase tracking-widest">Catalog</button>
+                <button id="btn-kit" onclick="setBuilderMode('kit')" class="px-4 py-2 text-white/40 text-[9px] font-black uppercase tracking-widest hover:text-white transition-colors">Kit Presets</button>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-white/20 text-[9px] font-bold uppercase tracking-widest hidden lg:block">EUR · European Union</span>
+            <button onclick="closeBuilder()" class="text-white/50 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="flex flex-1 overflow-hidden">
+
+        <!-- LEFT: Products -->
+        <aside class="w-72 builder-sidebar border-r border-white/5 flex flex-col overflow-hidden">
+            <div class="p-5 overflow-y-auto flex-1 space-y-6">
+                <!-- Filters -->
+                <div id="catalog-panel" class="space-y-5">
+                    <div>
+                        <p class="text-[9px] font-black text-gray-500 uppercase tracking-[0.2em] mb-3">Filter Palette</p>
+                        <div class="grid grid-cols-2 gap-1.5">
+                            <button onclick="setColor('all')" class="color-btn active flex items-center gap-2 px-3 py-2 bg-gold text-black text-[9px] font-black uppercase">
+                                <span class="w-2 h-2 rounded-full bg-black/30"></span> All
+                            </button>
+                            <button onclick="setColor('luxury-black')" class="color-btn flex items-center gap-2 px-3 py-2 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10">
+                                <span class="w-2 h-2 rounded-full bg-black border border-white/30"></span> Black
+                            </button>
+                            <button onclick="setColor('corporate-blue')" class="color-btn flex items-center gap-2 px-3 py-2 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10">
+                                <span class="w-2 h-2 rounded-full bg-blue-600"></span> Blue
+                            </button>
+                            <button onclick="setColor('green-eco')" class="color-btn flex items-center gap-2 px-3 py-2 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10">
+                                <span class="w-2 h-2 rounded-full bg-green-500"></span> Eco
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[9px] font-black text-gray-500 uppercase tracking-[0.2em] mb-3">Category</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <button onclick="setCat('all')" class="cat-btn active px-3 py-1.5 bg-gold text-black text-[9px] font-black uppercase">All</button>
+                            <button onclick="setCat('Apparel')" class="cat-btn px-3 py-1.5 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10">Apparel</button>
+                            <button onclick="setCat('Bags')" class="cat-btn px-3 py-1.5 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10">Bags</button>
+                            <button onclick="setCat('Event')" class="cat-btn px-3 py-1.5 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10">Event</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[9px] font-black text-gray-500 uppercase tracking-[0.2em] mb-3">Available Merch</p>
+                        <div id="product-list" class="space-y-2"></div>
+                    </div>
+                </div>
+
+                <div id="kit-panel" class="hidden space-y-4">
+                    <p class="text-[9px] font-black text-gray-500 uppercase tracking-[0.2em] mb-3">B2B Presets</p>
+                    <div id="kit-list" class="space-y-3"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CENTER: Canvas -->
+        <main class="flex-1 builder-canvas flex flex-col items-center justify-center overflow-hidden relative">
+            <div id="canvas-grid" class="w-full max-w-4xl p-8 grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="col-span-full text-center space-y-4 opacity-20 py-20">
+                    <i data-lucide="layers" class="w-16 h-16 mx-auto stroke-[0.5] text-white"></i>
+                    <p class="text-white text-[10px] font-black uppercase tracking-[0.3em]">Click products to build your kit</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- RIGHT: Summary -->
+        <aside class="w-80 builder-sidebar border-l border-white/5 flex flex-col overflow-hidden">
+            <div class="p-5 border-b border-white/5 flex items-center justify-between">
+                <div class="flex items-center gap-2 text-white">
+                    <i data-lucide="calculator" class="w-3 h-3 text-gray-500"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Line Preview</span>
+                </div>
+                <span id="sel-count" class="w-6 h-6 bg-gold text-black flex items-center justify-center text-[10px] font-black">0</span>
+            </div>
+            <div id="summary-items" class="flex-1 overflow-y-auto p-5 space-y-5">
+                <div class="h-full flex items-center justify-center opacity-20 text-white">
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-center italic">Selection is empty</p>
+                </div>
+            </div>
+
+            <!-- Totals + Contact Form -->
+            <div class="p-6 bg-black space-y-6">
+                <div class="flex justify-between items-end border-b border-white/10 pb-6">
+                    <div>
+                        <span class="text-[9px] text-white/30 font-black uppercase tracking-widest block mb-1">Total Est. (EUR)</span>
+                        <span id="total-price" class="text-4xl font-black text-white tracking-tight">€0</span>
+                        <span class="text-gold text-[9px] font-black uppercase ml-1">Excl. VAT</span>
+                    </div>
+                    <div class="text-right">
+                        <div class="flex items-center gap-1.5 justify-end mb-1">
+                            <i data-lucide="truck" class="w-3 h-3 text-gold"></i>
+                            <span id="lead-time" class="text-[9px] font-black uppercase text-white/30">-- Days</span>
+                        </div>
+                        <p class="text-[8px] text-white/20 uppercase tracking-tight">Est. Delivery Zone EU</p>
+                    </div>
+                </div>
+
+                <!-- Mini Contact Form in Builder -->
+                <div id="contact-form-section" class="space-y-3">
+                    <p class="text-[9px] font-black text-gold uppercase tracking-widest">Get Consultation</p>
+                    <input id="cf-name" type="text" placeholder="First + Last Name" class="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-[11px] text-white placeholder-white/20 focus:border-gold outline-none transition-colors">
+                    <input id="cf-contact" type="text" placeholder="Telegram @handle or Email" class="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-[11px] text-white placeholder-white/20 focus:border-gold outline-none transition-colors">
+                    <button onclick="submitRequest()" class="w-full bg-gold text-black py-3.5 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all">Send Request</button>
+                    <div id="form-success" class="hidden text-center text-[10px] text-gold font-black uppercase tracking-wider py-2">✓ Request sent successfully!</div>
+                </div>
+
+                <p class="text-[8px] text-white/20 text-center uppercase tracking-widest leading-relaxed">Prices valid for 30 days · Standard lead times apply</p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     INDUSTRIAL EXCELLENCE
+══════════════════════════════════════════ -->
+<section id="production" class="py-24 bg-white overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Production" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+            <div class="absolute -bottom-6 -right-6 bg-gold p-6 shadow-xl hidden xl:block">
+                <p class="text-[8px] font-black uppercase tracking-widest opacity-60">Manufacturing Since</p>
+                <p class="text-2xl font-black">2012</p>
+            </div>
+        </div>
+        <div class="space-y-10">
+            <div>
+                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-gold mb-4">Manufacturing Facility</p>
+                <h2 class="section-title">Industrial<br>Excellence</h2>
+            </div>
+            <div class="space-y-8">
+                <div class="flex gap-5">
+                    <div class="w-6 h-6 bg-gold flex items-center justify-center shrink-0 mt-0.5">
+                        <i data-lucide="check" class="w-3 h-3 text-black"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase tracking-tight mb-1.5">24/7 Production Cycle</h4>
+                        <p class="text-[11px] text-gray-400 font-medium uppercase leading-relaxed">Around-the-clock operations across our facilities, irrespective of order size or complexity.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5">
+                    <div class="w-6 h-6 bg-gold flex items-center justify-center shrink-0 mt-0.5">
+                        <i data-lucide="check" class="w-3 h-3 text-black"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase tracking-tight mb-1.5">International Quality Certification</h4>
+                        <p class="text-[11px] text-gray-400 font-medium uppercase leading-relaxed">ISO certified processes. European material standards are independent QC at every production step.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5">
+                    <div class="w-6 h-6 bg-gold flex items-center justify-center shrink-0 mt-0.5">
+                        <i data-lucide="check" class="w-3 h-3 text-black"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase tracking-tight mb-1.5">Real Production. Real Team.</h4>
+                        <p class="text-[11px] text-gray-400 font-medium uppercase leading-relaxed">70% of our content comes from a real Alfa Media facility — machines, results, people. Not AI or stock.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5">
+                    <div class="w-6 h-6 bg-gold flex items-center justify-center shrink-0 mt-0.5">
+                        <i data-lucide="check" class="w-3 h-3 text-black"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-sm uppercase tracking-tight mb-1.5">Sustainable Material Sourcing</h4>
+                        <p class="text-[11px] text-gray-400 font-medium uppercase leading-relaxed">We support certified organic fabrics, water-based inks. Carbon-footprint reporting available on request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SELECTED PROJECTS
+══════════════════════════════════════════ -->
+<section id="portfolio" class="py-24 bg-gray-50">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="flex items-end justify-between mb-16">
+            <h2 class="section-title">Selected Projects</h2>
+            <a href="#" class="text-[10px] font-black uppercase tracking-widest text-gold hover:text-black transition-colors flex items-center gap-2">View All Projects <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] overflow-hidden bg-gray-200 mb-3">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="">
+                </div>
+                <p class="text-[9px] font-black text-gold uppercase tracking-wider">For Tech Conference, Gdańsk</p>
+                <p class="text-[10px] font-bold uppercase text-gray-600 mt-1">Event merch &amp; Print Materials</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] overflow-hidden bg-gray-200 mb-3">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="">
+                </div>
+                <p class="text-[9px] font-black text-gold uppercase tracking-wider">HQ Project, Germany</p>
+                <p class="text-[10px] font-bold uppercase text-gray-600 mt-1">Welcome Kit for New Hires</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] overflow-hidden bg-gray-200 mb-3">
+                    <img src="https://images.unsplash.com/photo-1504198453319-5ce911baf2ea?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="">
+                </div>
+                <p class="text-[9px] font-black text-gold uppercase tracking-wider">Corporate Client, B2B</p>
+                <p class="text-[10px] font-bold uppercase text-gray-600 mt-1">Onboarding Merchandise</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] overflow-hidden bg-gray-200 mb-3">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="">
+                </div>
+                <p class="text-[9px] font-black text-gold uppercase tracking-wider">SaAs Company, U/K</p>
+                <p class="text-[10px] font-bold uppercase text-gray-600 mt-1">Onboarding Kit</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] overflow-hidden bg-gray-200 mb-3">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="">
+                </div>
+                <p class="text-[9px] font-black text-gold uppercase tracking-wider">Kyiv Media Group, P/W</p>
+                <p class="text-[10px] font-bold uppercase text-gray-600 mt-1">Large-format &amp; Signage</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════ -->
+<section id="about" class="py-24 bg-white">
+    <div class="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-2 gap-20">
+        <div class="space-y-10">
+            <h2 class="section-title">About Alfa<br>Media Group</h2>
+            <p class="text-gray-400 text-sm font-medium leading-relaxed uppercase max-w-lg">
+                We are a full-production company specialising in printing and merchandise manufacturing, our production facility is based in Kyiv, which allows us to offer top quality, competitive pricing and rapid turnaround for even the most demand clients.
+            </p>
+            <a href="#contact" class="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-black hover:text-gold transition-colors">Learn More About Us <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" class="col-span-2 w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="">
+            <img src="https://images.unsplash.com/photo-1504153267737-5fb1d42d53e9?auto=format&fit=crop&q=80&w=400" class="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="">
+            <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&q=80&w=400" class="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=400" class="col-span-2 w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="">
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     REQUEST A PRODUCTION QUOTE
+══════════════════════════════════════════ -->
+<section id="contact" class="py-24 bg-gray-50">
+    <div class="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-4 space-y-10">
+            <h2 class="section-title">Request a<br>Production<br>Quote</h2>
+            <p class="text-gray-400 text-xs uppercase font-bold leading-relaxed tracking-widest max-w-sm">
+                Share your project details and we'll prepare a tailored production estimate within 2 business hours.
+            </p>
+            <div class="space-y-5 pt-8 border-t border-gray-200">
+                <div class="flex items-center gap-4">
+                    <span class="w-1.5 h-1.5 bg-gold rounded-full shrink-0"></span>
+                    <div>
+                        <p class="text-[9px] font-black uppercase tracking-wider">Kyiv — HQ &amp; Production</p>
+                        <p class="text-[9px] text-gray-400 uppercase font-medium">Main production facility</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="w-1.5 h-1.5 bg-gold rounded-full shrink-0"></span>
+                    <div>
+                        <p class="text-[9px] font-black uppercase tracking-wider">Warsaw — EU Sales Office</p>
+                        <p class="text-[9px] text-gray-400 uppercase font-medium">European client management</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="w-1.5 h-1.5 bg-gold rounded-full shrink-0"></span>
+                    <div>
+                        <p class="text-[9px] font-black uppercase tracking-wider">Prague — Berlin</p>
+                        <p class="text-[9px] text-gray-400 uppercase font-medium">Western EU representation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-8 bg-white p-10 shadow-sm border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Company Name</label>
+                    <input type="text" class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors" placeholder="Your Company">
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Contact Person</label>
+                    <input type="text" class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors" placeholder="Full Name">
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Email Address</label>
+                    <input type="email" class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors" placeholder="name@company.com">
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Phone / Telegram</label>
+                    <input type="text" class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors" placeholder="+38 / @handle">
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Budget (EUR)</label>
+                    <select class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors text-gray-500">
+                        <option>Select budget range</option>
+                        <option>€500 – €2,000</option>
+                        <option>€2,000 – €10,000</option>
+                        <option>€10,000 – €50,000</option>
+                        <option>€50,000+</option>
+                    </select>
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Location Budget</label>
+                    <select class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors text-gray-500">
+                        <option>Delivery Region</option>
+                        <option>Ukraine</option>
+                        <option>EU / Schengen</option>
+                        <option>UK / Israel</option>
+                        <option>USA / Rest of World</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 space-y-1.5">
+                    <label class="text-[9px] font-black uppercase tracking-widest text-gray-400">Project Brief</label>
+                    <textarea rows="4" class="w-full bg-gray-50 border border-gray-100 px-4 py-3.5 text-sm focus:border-gold outline-none transition-colors resize-none" placeholder="Describe your project, quantities, and timeline..."></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button onclick="submitMainForm()" class="bg-gold text-black px-10 py-4 font-black uppercase text-[11px] tracking-widest hover:bg-black hover:text-white transition-all shadow-lg">Submit Request</button>
+                    <div id="main-form-success" class="hidden mt-4 text-sm font-black text-green-600 uppercase">✓ Request sent to 2294598@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="bg-black pt-24 pb-10">
+    <div class="max-w-[1440px] mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-20 border-b border-white/5">
+            <div class="lg:col-span-2 space-y-8">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 bg-gold flex items-center justify-center">
+                        <span class="text-black font-black text-base">A</span>
+                    </div>
+                    <div>
+                        <div class="text-white font-black text-lg uppercase tracking-tight">Alfa Media Group Ltd</div>
+                        <div class="text-[8px] text-gray-500 font-bold tracking-[0.2em] uppercase">🇺🇦 🇺🇸 🇬🇧 🇮🇱</div>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-[11px] leading-relaxed uppercase font-medium max-w-xs">
+                    Premium Printing &amp; Merchandise Production for European Businesses.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-8 h-8 bg-white/5 flex items-center justify-center hover:bg-gold transition-colors">
+                        <i data-lucide="linkedin" class="w-3.5 h-3.5 text-white hover:text-black"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 bg-white/5 flex items-center justify-center hover:bg-gold transition-colors">
+                        <i data-lucide="instagram" class="w-3.5 h-3.5 text-white"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 bg-white/5 flex items-center justify-center hover:bg-gold transition-colors">
+                        <i data-lucide="twitter" class="w-3.5 h-3.5 text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-white text-[9px] font-black uppercase tracking-[0.4em]">Services</h4>
+                <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                    <li><a href="#services" class="hover:text-gold transition-colors">Printing</a></li>
+                    <li><a href="#services" class="hover:text-gold transition-colors">Merchandise</a></li>
+                    <li><a href="#services" class="hover:text-gold transition-colors">Packaging</a></li>
+                    <li><a href="#services" class="hover:text-gold transition-colors">Finishing</a></li>
+                    <li><a href="#services" class="hover:text-gold transition-colors">Personalisation</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-white text-[9px] font-black uppercase tracking-[0.4em]">Company</h4>
+                <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                    <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                    <li><a href="#portfolio" class="hover:text-gold transition-colors">Portfolio</a></li>
+                    <li><a href="#" class="hover:text-gold transition-colors">Blog</a></li>
+                    <li><a href="#" class="hover:text-gold transition-colors">Merch Builder</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-white text-[9px] font-black uppercase tracking-[0.4em]">Contact Us</h4>
+                <div class="space-y-4 text-gray-500 text-[10px] font-bold uppercase">
+                    <div class="flex gap-2 items-start">
+                        <i data-lucide="mail" class="w-3 h-3 text-gold shrink-0 mt-0.5"></i>
+                        <span>2294598@gmail.com</span>
+                    </div>
+                    <div class="flex gap-2 items-start">
+                        <i data-lucide="phone" class="w-3 h-3 text-gold shrink-0 mt-0.5"></i>
+                        <span>+380 95 810 40 85</span>
+                    </div>
+                    <div class="flex gap-2 items-start">
+                        <i data-lucide="map-pin" class="w-3 h-3 text-gold shrink-0 mt-0.5"></i>
+                        <span>Kyiv, Ukraine<br>Warsaw, Poland</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-bold uppercase tracking-widest text-gray-600">
+            <p>© 2026 Alfa Media Group Ltd. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+                <a href="#" class="hover:text-white transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
+<script>
+// ── Init Lucide Icons ──
+lucide.createIcons();
+
+// ── Products Data ──
+const PRODUCTS = [
+    { id: "tshirt", name: "Classic T-Shirt", cat: "Apparel", price: 12.50, colors: ["vibrant-campaign","luxury-black","corporate-blue"], img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=400", lead: 7 },
+    { id: "hoodie", name: "Premium Hoodie", cat: "Apparel", price: 32.00, colors: ["luxury-black","corporate-blue"], img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=400", lead: 10 },
+    { id: "tote", name: "Organic Tote Bag", cat: "Bags", price: 4.20, colors: ["green-eco","vibrant-campaign"], img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=400", lead: 5 },
+    { id: "notebook", name: "Hardcover Notebook", cat: "Event", price: 6.50, colors: ["corporate-blue","luxury-black"], img: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=400", lead: 7 },
+    { id: "pen", name: "Metal Pen Pro", cat: "Event", price: 1.25, colors: ["all"], img: "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&q=80&w=400", lead: 5 },
+    { id: "tumblerr", name: "Steel Bottle", cat: "Event", price: 14.00, colors: ["green-eco","corporate-blue","luxury-black"], img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=400", lead: 7 },
+    { id: "giftbox", name: "Premium Gift Box", cat: "Event", price: 8.00, colors: ["luxury-black"], img: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=400", lead: 14 },
+    { id: "backpack", name: "Corporate Backpack", cat: "Bags", price: 28.00, colors: ["corporate-blue","luxury-black"], img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=400", lead: 12 },
+    { id: "badge", name: "Corporate Badge", cat: "Event", price: 1.80, colors: ["all"], img: "https://images.unsplash.com/photo-1598914207931-2856f4bc18ca?auto=format&fit=crop&q=80&w=400", lead: 3 },
+    { id: "sticker", name: "Sticker Pack", cat: "Event", price: 0.35, colors: ["all","vibrant-campaign"], img: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=400", lead: 3 },
+];
+
+const KITS = [
+    { id: "conf", name: "Conference Kit", tagline: "400 attendees", items: [{id:"notebook", qty:200}, {id:"pen", qty:500}, {id:"tote", qty:200}, {id:"badge", qty:400}] },
+    { id: "welcome", name: "Welcome Pack", tagline: "HR onboarding", items: [{id:"giftbox", qty:50}, {id:"hoodie", qty:50}, {id:"notebook", qty:50}] },
+];
+
+let appState = { cat: 'all', color: 'all', selected: [] };
+
+// ── Builder Open/Close ──
+function openBuilder() {
+    document.getElementById('builder-modal').classList.remove('hidden');
+    document.getElementById('builder-modal').classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    renderProductList();
+    renderKitList();
+    lucide.createIcons();
+}
+function closeBuilder() {
+    document.getElementById('builder-modal').classList.add('hidden');
+    document.getElementById('builder-modal').classList.remove('flex');
+    document.body.style.overflow = '';
+}
+
+// ── Mode Toggling ──
+function setBuilderMode(mode) {
+    const isKit = mode === 'kit';
+    document.getElementById('catalog-panel').classList.toggle('hidden', isKit);
+    document.getElementById('kit-panel').classList.toggle('hidden', !isKit);
+    document.getElementById('btn-catalog').className = !isKit
+        ? 'px-4 py-2 bg-gold text-black text-[9px] font-black uppercase tracking-widest'
+        : 'px-4 py-2 text-white/40 text-[9px] font-black uppercase tracking-widest hover:text-white transition-colors';
+    document.getElementById('btn-kit').className = isKit
+        ? 'px-4 py-2 bg-gold text-black text-[9px] font-black uppercase tracking-widest'
+        : 'px-4 py-2 text-white/40 text-[9px] font-black uppercase tracking-widest hover:text-white transition-colors';
+}
+
+// ── Filters ──
+function setCat(c) {
+    appState.cat = c;
+    document.querySelectorAll('.cat-btn').forEach(b => {
+        const val = b.textContent.trim().toLowerCase();
+        const isActive = (c === 'all' && val === 'all') || (c !== 'all' && b.textContent.trim() === c);
+        b.className = isActive
+            ? 'cat-btn active px-3 py-1.5 bg-gold text-black text-[9px] font-black uppercase'
+            : 'cat-btn px-3 py-1.5 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10';
+    });
+    renderProductList();
+}
+
+function setColor(c) {
+    appState.color = c;
+    document.querySelectorAll('.color-btn').forEach(b => {
+        const fn = b.getAttribute('onclick');
+        const isActive = fn && fn.includes(`'${c}'`);
+        b.className = isActive
+            ? 'color-btn active flex items-center gap-2 px-3 py-2 bg-gold text-black text-[9px] font-black uppercase'
+            : 'color-btn flex items-center gap-2 px-3 py-2 bg-white/5 text-white/60 text-[9px] font-black uppercase hover:bg-white/10';
+    });
+    renderProductList();
+}
+
+// ── Render Products ──
+function renderProductList() {
+    const list = document.getElementById('product-list');
+    list.innerHTML = '';
+    PRODUCTS
+        .filter(p => {
+            const catOk = appState.cat === 'all' || p.cat === appState.cat;
+            const colOk = appState.color === 'all' || p.colors.includes(appState.color) || p.colors.includes('all');
+            return catOk && colOk;
+        })
+        .forEach(p => {
+            const isSelected = appState.selected.some(s => s.id === p.id);
+            const el = document.createElement('div');
+            el.className = `group flex items-center gap-3 p-2 cursor-pointer border transition-all ${isSelected ? 'border-gold bg-gold/5' : 'border-white/5 hover:border-white/20 bg-white/3'}`;
+            el.onclick = () => toggleProduct(p.id);
+            el.innerHTML = `
+                <div class="w-12 h-12 bg-white/5 overflow-hidden shrink-0">
+                    <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-[10px] font-black uppercase text-white truncate">${p.name}</p>
+                    <p class="text-[9px] text-gold font-bold">from €${p.price.toFixed(2)}</p>
+                </div>
+                <div class="w-4 h-4 border ${isSelected ? 'bg-gold border-gold' : 'border-white/20'} shrink-0 flex items-center justify-center">
+                    ${isSelected ? '<svg class="w-2.5 h-2.5" fill="none" stroke="black" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>' : ''}
+                </div>
+            `;
+            list.appendChild(el);
+        });
+    lucide.createIcons();
+}
+
+// ── Render Kit Presets ──
+function renderKitList() {
+    const list = document.getElementById('kit-list');
+    list.innerHTML = '';
+    KITS.forEach(k => {
+        const el = document.createElement('div');
+        el.className = 'group cursor-pointer border border-white/5 hover:border-gold p-3 transition-all';
+        el.onclick = () => loadKit(k.id);
+        el.innerHTML = `
+            <h5 class="text-[10px] font-black uppercase text-white mb-0.5">${k.name}</h5>
+            <p class="text-[9px] text-gray-500 uppercase font-bold">${k.tagline} · ${k.items.length} items</p>
+        `;
+        list.appendChild(el);
+    });
+}
+
+function loadKit(kid) {
+    const kit = KITS.find(k => k.id === kid);
+    if (!kit) return;
+    appState.selected = kit.items.map(i => ({...i}));
+    setBuilderMode('catalog');
+    renderProductList();
+    updateSummary();
+}
+
+// ── Toggle Product ──
+function toggleProduct(id) {
+    const idx = appState.selected.findIndex(s => s.id === id);
+    if (idx > -1) {
+        appState.selected.splice(idx, 1);
+    } else {
+        const product = PRODUCTS.find(p => p.id === id);
+        const defaultQty = product && product.cat === 'Event' ? 200 : (product && product.cat === 'Apparel' ? 10 : 100);
+        appState.selected.push({ id, qty: defaultQty });
+    }
+    renderProductList();
+    updateSummary();
+}
+
+// ── Update Qty ──
+function adjustQty(id, delta) {
+    const item = appState.selected.find(s => s.id === id);
+    if (item) {
+        item.qty = Math.max(1, item.qty + delta);
+        updateSummary();
+    }
+}
+
+function setQty(id, val) {
+    const item = appState.selected.find(s => s.id === id);
+    if (item) { item.qty = Math.max(1, parseInt(val) || 1); updateSummary(); }
+}
+
+// ── Update Summary ──
+function updateSummary() {
+    const container = document.getElementById('summary-items');
+    container.innerHTML = '';
+    let total = 0, maxLead = 0;
+
+    if (appState.selected.length === 0) {
+        container.innerHTML = '<div class="h-full flex items-center justify-center opacity-20 text-white"><p class="text-[9px] font-bold uppercase tracking-widest text-center italic">Selection is empty</p></div>';
+    } else {
+        appState.selected.forEach(s => {
+            const p = PRODUCTS.find(pr => pr.id === s.id);
+            if (!p) return;
+            const lineTotal = p.price * s.qty;
+            total += lineTotal;
+            maxLead = Math.max(maxLead, p.lead);
+            const el = document.createElement('div');
+            el.className = 'space-y-2 pb-4 border-b border-white/5 last:border-0';
+            el.innerHTML = `
+                <div class="flex justify-between items-start gap-2">
+                    <p class="text-[10px] font-black uppercase text-white leading-tight">${p.name}</p>
+                    <button onclick="toggleProduct('${p.id}')" class="text-white/20 hover:text-red-400 transition-colors shrink-0 mt-0.5">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center bg-white/5 border border-white/10">
+                        <button onclick="adjustQty('${p.id}', -10)" class="px-2 py-1.5 text-white/60 hover:text-white text-xs">-</button>
+                        <input type="number" value="${s.qty}" onchange="setQty('${p.id}', this.value)" class="w-12 text-center text-[10px] font-black text-white bg-transparent outline-none py-1">
+                        <button onclick="adjustQty('${p.id}', 10)" class="px-2 py-1.5 text-white/60 hover:text-white text-xs">+</button>
+                    </div>
+                    <span class="text-[11px] font-black text-white">€${lineTotal.toLocaleString()}</span>
+                </div>
+            `;
+            container.appendChild(el);
+        });
+    }
+
+    document.getElementById('total-price').textContent = `€${total.toLocaleString()}`;
+    document.getElementById('sel-count').textContent = appState.selected.length;
+    document.getElementById('lead-time').textContent = appState.selected.length ? `${maxLead} Business Days` : '-- Days';
+    renderCanvas();
+}
+
+// ── Render Canvas ──
+function renderCanvas() {
+    const grid = document.getElementById('canvas-grid');
+    grid.innerHTML = '';
+    if (appState.selected.length === 0) {
+        grid.innerHTML = '<div class="col-span-full text-center space-y-4 opacity-20 py-20"><i data-lucide="layers" class="w-16 h-16 mx-auto stroke-[0.5] text-white"></i><p class="text-white text-[10px] font-black uppercase tracking-[0.3em]">Click products to build your kit</p></div>';
+    } else {
+        appState.selected.forEach((s, i) => {
+            const p = PRODUCTS.find(pr => pr.id === s.id);
+            if (!p) return;
+            const el = document.createElement('div');
+            el.className = 'relative group aspect-square bg-white overflow-hidden border border-white/10 slide-in';
+            el.style.animationDelay = `${i * 40}ms`;
+            el.innerHTML = `
+                <img src="${p.img}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute top-2 left-2 bg-black text-white text-[8px] font-black px-2 py-1">${s.qty} PCS</div>
+                <div class="absolute bottom-0 left-0 right-0 p-3 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p class="text-[9px] font-black uppercase truncate">${p.name}</p>
+                    <p class="text-[8px] text-gold font-bold">€${(p.price * s.qty).toLocaleString()}</p>
+                </div>
+            `;
+            grid.appendChild(el);
+        });
+    }
+    lucide.createIcons();
+}
+
+// ── Form Submit (Builder mini-form) ──
+function submitRequest() {
+    const name = document.getElementById('cf-name').value.trim();
+    const contact = document.getElementById('cf-contact').value.trim();
+    if (!name || !contact) { alert('Please fill in your name and contact.'); return; }
+
+    const kitSummary = appState.selected.map(s => {
+        const p = PRODUCTS.find(pr => pr.id === s.id);
+        return `${p ? p.name : s.id}: ${s.qty} pcs`;
+    }).join(', ');
+
+    const subject = encodeURIComponent(`Alfa Media Kit Request — ${name}`);
+    const body = encodeURIComponent(`Hello!\n\nNew kit consultation request:\n\nName: ${name}\nContact: ${contact}\n\nSelected Items:\n${kitSummary || 'No items selected'}\n\n---\nSent from Alfa Media Kit Builder`);
+    window.open(`mailto:2294598@gmail.com?subject=${subject}&body=${body}`);
+
+    document.getElementById('form-success').classList.remove('hidden');
+    setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 4000);
+    document.getElementById('cf-name').value = '';
+    document.getElementById('cf-contact').value = '';
+}
+
+// ── Main Form Submit ──
+function submitMainForm() {
+    document.getElementById('main-form-success').classList.remove('hidden');
+    setTimeout(() => document.getElementById('main-form-success').classList.add('hidden'), 5000);
+}
+
+// ── Hero Slider (10 seconds) ──
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.slide-dot');
+let currentSlide = 0;
+
+setInterval(() => {
+    slides[currentSlide].style.opacity = '0';
+    dots[currentSlide].style.width = '8px';
+    dots[currentSlide].style.background = 'rgba(255,255,255,0.4)';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.opacity = '1';
+    dots[currentSlide].style.width = '32px';
+    dots[currentSlide].style.background = '#EAB308';
+}, 10000);
+
+// ── Sticky header shadow on scroll ──
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('site-header');
+    header.classList.toggle('shadow-md', window.scrollY > 50);
+});
+</script>
+</body>
+</html>

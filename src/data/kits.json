@@ -1,0 +1,102 @@
+[
+  {
+    "id": "conference-kit",
+    "name": "Conference Kit",
+    "tagline": "Everything you need to run a professional event",
+    "description": "A complete branded package for conferences and summits. Includes attendee essentials: badge, lanyard, notebook, pen, tote bag, and branded bottle.",
+    "preset": "conference",
+    "coverImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=900",
+    "colorTag": "corporate-blue",
+    "items": [
+      { "productId": "badge-corporate",    "defaultQty": 500 },
+      { "productId": "lanyard-custom",     "defaultQty": 500 },
+      { "productId": "notebook-hardcover", "defaultQty": 200 },
+      { "productId": "pen-metal",          "defaultQty": 500 },
+      { "productId": "tote-bag-organic",   "defaultQty": 200 },
+      { "productId": "bottle-steel",       "defaultQty": 100 }
+    ]
+  },
+  {
+    "id": "press-kit",
+    "name": "Press Kit",
+    "tagline": "Make journalists remember your brand",
+    "description": "Curated press kit for media events and product launches. Includes premium packaging, branded notebook, pen, and exclusive merch piece that journalists keep on their desks.",
+    "preset": "press",
+    "coverImage": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=900",
+    "colorTag": "luxury-black",
+    "items": [
+      { "productId": "packaging-box",      "defaultQty": 100 },
+      { "productId": "notebook-hardcover", "defaultQty": 100 },
+      { "productId": "pen-metal",          "defaultQty": 100 },
+      { "productId": "sticker-pack",       "defaultQty": 500 },
+      { "productId": "flyer-a5",           "defaultQty": 1000 }
+    ]
+  },
+  {
+    "id": "corporate-welcome-kit",
+    "name": "Corporate Welcome Kit",
+    "tagline": "First day impressions that last a lifetime",
+    "description": "Premium onboarding kit for new employees or VIP clients. High-quality items that reflect your brand values and culture from day one.",
+    "preset": "corporate-welcome",
+    "coverImage": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=900",
+    "colorTag": "neutral-beige",
+    "items": [
+      { "productId": "packaging-box",      "defaultQty": 50 },
+      { "productId": "hoodie-premium",     "defaultQty": 50 },
+      { "productId": "notebook-hardcover", "defaultQty": 50 },
+      { "productId": "pen-metal",          "defaultQty": 50 },
+      { "productId": "mug-ceramic",        "defaultQty": 50 },
+      { "productId": "sticker-pack",       "defaultQty": 200 }
+    ]
+  },
+  {
+    "id": "exhibition-kit",
+    "name": "Exhibition Booth Kit",
+    "tagline": "Stand out on the exhibition floor",
+    "description": "Everything you need to brand your exhibition booth and engage visitors. High-volume items designed for maximum brand exposure during trade shows.",
+    "preset": "exhibition",
+    "coverImage": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=900",
+    "colorTag": "vibrant-campaign",
+    "items": [
+      { "productId": "tshirt-classic",     "defaultQty": 200 },
+      { "productId": "tote-bag-organic",   "defaultQty": 500 },
+      { "productId": "flyer-a5",           "defaultQty": 5000 },
+      { "productId": "sticker-pack",       "defaultQty": 1000 },
+      { "productId": "badge-corporate",    "defaultQty": 200 },
+      { "productId": "lanyard-custom",     "defaultQty": 200 }
+    ]
+  },
+  {
+    "id": "ngo-campaign-kit",
+    "name": "NGO Campaign Kit",
+    "tagline": "Purpose-driven merch for impactful campaigns",
+    "description": "Sustainable, eco-certified merchandise for NGOs, non-profits, and social campaigns. All items are produced with minimal environmental impact.",
+    "preset": "ngo-campaign",
+    "coverImage": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=900",
+    "colorTag": "green-eco",
+    "items": [
+      { "productId": "tote-bag-organic",   "defaultQty": 500 },
+      { "productId": "tshirt-classic",     "defaultQty": 200 },
+      { "productId": "bottle-steel",       "defaultQty": 200 },
+      { "productId": "sticker-pack",       "defaultQty": 1000 },
+      { "productId": "flyer-a5",           "defaultQty": 2000 }
+    ]
+  },
+  {
+    "id": "marketing-campaign-kit",
+    "name": "Marketing Campaign Kit",
+    "tagline": "Make your campaign impossible to ignore",
+    "description": "High-impact branded merch for marketing activations, product launches, and customer loyalty campaigns. Mix of visible wear and everday use items.",
+    "preset": "marketing",
+    "coverImage": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=900",
+    "colorTag": "vibrant-campaign",
+    "items": [
+      { "productId": "tshirt-classic",     "defaultQty": 500 },
+      { "productId": "cap-snapback",       "defaultQty": 200 },
+      { "productId": "tote-bag-organic",   "defaultQty": 500 },
+      { "productId": "sticker-pack",       "defaultQty": 2000 },
+      { "productId": "flyer-a5",           "defaultQty": 5000 },
+      { "productId": "powerbank-branded",  "defaultQty": 100 }
+    ]
+  }
+]

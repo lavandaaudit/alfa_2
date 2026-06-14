@@ -1,0 +1,398 @@
+[
+  {
+    "id": "tshirt-classic",
+    "name": "Classic T-Shirt",
+    "category": "Apparel",
+    "subcategory": "T-Shirts",
+    "description": "Premium 180g/m² cotton unisex tee. Available in 30+ colors. Your logo printed with precision via screen print or DTG. The cornerstone of any branded merch kit.",
+    "basePrice": 12.50,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 14.90 },
+      { "qty": 100, "pricePerUnit": 12.50 },
+      { "qty": 200, "pricePerUnit": 10.20 },
+      { "qty": 500, "pricePerUnit": 7.80 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1503342250614-ca440b8ec078?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=600"
+      ],
+      "mockup": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80&w=600"
+    },
+    "colorTags": ["vibrant-campaign", "luxury-black", "corporate-blue", "green-eco", "neutral-beige"],
+    "printOptions": ["Screen Print", "DTG", "Embroidery", "Heat Transfer"],
+    "minOrderQty": 50,
+    "productionDays": 7,
+    "popular": true
+  },
+  {
+    "id": "hoodie-premium",
+    "name": "Premium Hoodie",
+    "category": "Apparel",
+    "subcategory": "Hoodies",
+    "description": "320g/m² heavyweight fleece hoodie. Kangaroo pocket, ribbed cuffs. Perfect for corporate drops, event crews, and welcome kits. Unisex sizing S–3XL.",
+    "basePrice": 32.00,
+    "tiers": [
+      { "qty": 20,  "pricePerUnit": 38.00 },
+      { "qty": 50,  "pricePerUnit": 34.00 },
+      { "qty": 100, "pricePerUnit": 32.00 },
+      { "qty": 300, "pricePerUnit": 27.50 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1578768079052-aa76e52ff574?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1611329532992-0d4c1b35ad47?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["luxury-black", "corporate-blue", "neutral-beige"],
+    "printOptions": ["Screen Print", "Embroidery", "DTG"],
+    "minOrderQty": 20,
+    "productionDays": 10,
+    "popular": true
+  },
+  {
+    "id": "polo-corporate",
+    "name": "Corporate Polo",
+    "category": "Apparel",
+    "subcategory": "Polo",
+    "description": "Piqué cotton-blend polo with 3-button placket. Tailored fit available. Ideal for corporate uniforms and conference staff.",
+    "basePrice": 18.00,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 22.00 },
+      { "qty": 100, "pricePerUnit": 18.00 },
+      { "qty": 200, "pricePerUnit": 15.50 },
+      { "qty": 500, "pricePerUnit": 12.80 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["corporate-blue", "luxury-black", "neutral-beige"],
+    "printOptions": ["Embroidery", "Screen Print"],
+    "minOrderQty": 50,
+    "productionDays": 7
+  },
+  {
+    "id": "tote-bag-organic",
+    "name": "Organic Tote Bag",
+    "category": "Bags",
+    "subcategory": "Tote Bags",
+    "description": "100% organic cotton canvas tote, 4L capacity, reinforced handles. The go-to sustainable merch for eco-forward brands, NGOs, and green campaigns.",
+    "basePrice": 4.20,
+    "tiers": [
+      { "qty": 100, "pricePerUnit": 5.90 },
+      { "qty": 200, "pricePerUnit": 4.20 },
+      { "qty": 500, "pricePerUnit": 3.40 },
+      { "qty": 1000,"pricePerUnit": 2.60 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["green-eco", "neutral-beige", "vibrant-campaign"],
+    "printOptions": ["Screen Print", "Heat Transfer"],
+    "minOrderQty": 100,
+    "productionDays": 5,
+    "popular": true
+  },
+  {
+    "id": "backpack-corporate",
+    "name": "Corporate Backpack",
+    "category": "Bags",
+    "subcategory": "Backpacks",
+    "description": "25L water-resistant polyester backpack with padded laptop sleeve. Subtle branded patch or embroidered logo. Premium conference and welcome kit item.",
+    "basePrice": 28.00,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 36.00 },
+      { "qty": 100, "pricePerUnit": 28.00 },
+      { "qty": 200, "pricePerUnit": 24.00 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["corporate-blue", "luxury-black"],
+    "printOptions": ["Embroidery", "Patch"],
+    "minOrderQty": 50,
+    "productionDays": 12
+  },
+  {
+    "id": "notebook-hardcover",
+    "name": "Hardcover Notebook A5",
+    "category": "Notebooks & Stationery",
+    "subcategory": "Notebooks",
+    "description": "A5 hardcover notebook, 160 pages, dot-grid or lined. Branded debossing or UV print on cover. A premium staple for any conference or onboarding kit.",
+    "basePrice": 6.50,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 9.50 },
+      { "qty": 100, "pricePerUnit": 7.80 },
+      { "qty": 200, "pricePerUnit": 6.50 },
+      { "qty": 500, "pricePerUnit": 5.20 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["neutral-beige", "luxury-black", "corporate-blue", "green-eco"],
+    "printOptions": ["Deboss", "UV Print", "Foil Stamp"],
+    "minOrderQty": 50,
+    "productionDays": 7,
+    "popular": true
+  },
+  {
+    "id": "pen-metal",
+    "name": "Metal Ballpoint Pen",
+    "category": "Notebooks & Stationery",
+    "subcategory": "Pens",
+    "description": "Premium aluminium barrel ballpoint pen with laser-engraved logo. Smooth-writing refill. Ideal bulk add-on for any stationery or conference kit.",
+    "basePrice": 1.25,
+    "tiers": [
+      { "qty": 100,  "pricePerUnit": 2.20 },
+      { "qty": 500,  "pricePerUnit": 1.60 },
+      { "qty": 1000, "pricePerUnit": 1.25 },
+      { "qty": 5000, "pricePerUnit": 0.90 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["luxury-black", "corporate-blue", "neutral-beige"],
+    "printOptions": ["Laser Engrave"],
+    "minOrderQty": 100,
+    "productionDays": 5
+  },
+  {
+    "id": "mug-ceramic",
+    "name": "Ceramic Mug 330ml",
+    "category": "Drinkware",
+    "subcategory": "Mugs",
+    "description": "330ml ceramic mug, dishwasher-safe sublimation print. Full-wrap or one-side logo. Pantone color matching available. Classic welcome kit item.",
+    "basePrice": 4.50,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 6.50 },
+      { "qty": 100, "pricePerUnit": 5.20 },
+      { "qty": 200, "pricePerUnit": 4.50 },
+      { "qty": 500, "pricePerUnit": 3.60 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1514228742587-6b1558fcc3d1?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1556909114-44e3e70034e2?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1572119865084-43c285814d63?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["all"],
+    "printOptions": ["Sublimation", "Screen Print"],
+    "minOrderQty": 50,
+    "productionDays": 5
+  },
+  {
+    "id": "bottle-steel",
+    "name": "Insulated Steel Bottle",
+    "category": "Drinkware",
+    "subcategory": "Bottles",
+    "description": "500ml double-wall stainless steel bottle, keeps drinks cold 24h/hot 12h. Laser-engraved logo, powder-coated finish. Premium eco-friendly promo item.",
+    "basePrice": 14.00,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 18.00 },
+      { "qty": 100, "pricePerUnit": 14.00 },
+      { "qty": 200, "pricePerUnit": 12.00 },
+      { "qty": 500, "pricePerUnit": 9.50 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1588466585717-f8041aec7875?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["green-eco", "luxury-black", "corporate-blue"],
+    "printOptions": ["Laser Engrave", "Pad Print"],
+    "minOrderQty": 50,
+    "productionDays": 7,
+    "popular": true
+  },
+  {
+    "id": "badge-corporate",
+    "name": "Corporate Badges",
+    "category": "Event",
+    "subcategory": "Badges",
+    "description": "Custom name badges with clip or lanyard hole. Double-sided print, full color. Available in plastic, metal, or biodegradable materials.",
+    "basePrice": 1.80,
+    "tiers": [
+      { "qty": 100, "pricePerUnit": 2.80 },
+      { "qty": 500, "pricePerUnit": 2.00 },
+      { "qty": 1000,"pricePerUnit": 1.80 },
+      { "qty": 5000,"pricePerUnit": 1.20 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1598914207931-2856f4bc18ca?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["all"],
+    "printOptions": ["Digital Print", "UV Print"],
+    "minOrderQty": 100,
+    "productionDays": 3
+  },
+  {
+    "id": "lanyard-custom",
+    "name": "Custom Lanyards",
+    "category": "Event",
+    "subcategory": "Lanyards",
+    "description": "15mm or 20mm polyester sublimation lanyards. Full-color, edge-to-edge branding. Safety clip and badge reel included. Essential conference item.",
+    "basePrice": 1.20,
+    "tiers": [
+      { "qty": 100,  "pricePerUnit": 2.00 },
+      { "qty": 500,  "pricePerUnit": 1.50 },
+      { "qty": 1000, "pricePerUnit": 1.20 },
+      { "qty": 2000, "pricePerUnit": 0.90 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["all"],
+    "printOptions": ["Sublimation", "Screen Print"],
+    "minOrderQty": 100,
+    "productionDays": 5
+  },
+  {
+    "id": "flyer-a5",
+    "name": "A5 Flyers (Full Color)",
+    "category": "Printing",
+    "subcategory": "Leaflets",
+    "description": "A5 double-sided flyers on 170g/m² silk coated stock. 4+4 full-color offset print. Fast turnaround for events, campaigns, and product launches.",
+    "basePrice": 0.12,
+    "tiers": [
+      { "qty": 1000,  "pricePerUnit": 0.25 },
+      { "qty": 5000,  "pricePerUnit": 0.16 },
+      { "qty": 10000, "pricePerUnit": 0.12 },
+      { "qty": 50000, "pricePerUnit": 0.07 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["vibrant-campaign", "all"],
+    "printOptions": ["Offset 4+4", "Digital"],
+    "minOrderQty": 1000,
+    "productionDays": 3
+  },
+  {
+    "id": "cap-snapback",
+    "name": "Branded Snapback Cap",
+    "category": "Apparel",
+    "subcategory": "Headwear",
+    "description": "6-panel unstructured snapback with embroidered logo on front panel and woven label inside. Available in 20+ colorways.",
+    "basePrice": 9.80,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 14.50 },
+      { "qty": 100, "pricePerUnit": 11.00 },
+      { "qty": 200, "pricePerUnit": 9.80 },
+      { "qty": 500, "pricePerUnit": 7.50 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1534215754734-18e55d13e346?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["vibrant-campaign", "luxury-black", "neutral-beige"],
+    "printOptions": ["Embroidery", "Patch"],
+    "minOrderQty": 50,
+    "productionDays": 10
+  },
+  {
+    "id": "packaging-box",
+    "name": "Custom Gift Box",
+    "category": "Packaging",
+    "subcategory": "Gift Boxes",
+    "description": "Premium rigid gift box with magnetic closure. Inside tissue paper, ribbon pull. Full-color offset or UV print. Elevates any welcome or press kit to luxury tier.",
+    "basePrice": 8.00,
+    "tiers": [
+      { "qty": 50,  "pricePerUnit": 14.00 },
+      { "qty": 100, "pricePerUnit": 10.00 },
+      { "qty": 200, "pricePerUnit": 8.00 },
+      { "qty": 500, "pricePerUnit": 6.50 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["luxury-black", "neutral-beige", "green-eco"],
+    "printOptions": ["Offset UV", "Foil Stamp", "Emboss"],
+    "minOrderQty": 50,
+    "productionDays": 14
+  },
+  {
+    "id": "sticker-pack",
+    "name": "Die-Cut Sticker Pack",
+    "category": "Printing",
+    "subcategory": "Stickers",
+    "description": "Vinyl die-cut stickers, custom shapes, weatherproof laminate. Packaged in packs of 10 or loose. Great add-on for any brand kit or event bag.",
+    "basePrice": 0.35,
+    "tiers": [
+      { "qty": 100,  "pricePerUnit": 0.95 },
+      { "qty": 500,  "pricePerUnit": 0.55 },
+      { "qty": 1000, "pricePerUnit": 0.35 },
+      { "qty": 5000, "pricePerUnit": 0.22 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["vibrant-campaign", "all"],
+    "printOptions": ["Digital UV"],
+    "minOrderQty": 100,
+    "productionDays": 3
+  },
+  {
+    "id": "powerbank-branded",
+    "name": "Branded Power Bank 10000mAh",
+    "category": "Event",
+    "subcategory": "Tech Accessories",
+    "description": "10,000mAh slim power bank, USB-A + USB-C output. Laser-engraved or pad-printed logo. Premium conference and VIP welcome kit must-have.",
+    "basePrice": 18.00,
+    "tiers": [
+      { "qty": 25,  "pricePerUnit": 26.00 },
+      { "qty": 50,  "pricePerUnit": 22.00 },
+      { "qty": 100, "pricePerUnit": 18.00 },
+      { "qty": 250, "pricePerUnit": 15.00 }
+    ],
+    "media": {
+      "main": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=600"
+      ]
+    },
+    "colorTags": ["corporate-blue", "luxury-black"],
+    "printOptions": ["Laser Engrave", "Pad Print"],
+    "minOrderQty": 25,
+    "productionDays": 14
+  }
+]

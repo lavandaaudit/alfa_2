@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Media Group | Premium Printing & Merchandise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .text-gold { color: #EAB308; }
+        .bg-gold { background-color: #EAB308; }
+        .border-gold { border-color: #EAB308; }
+        .bg-dark-section { background-color: #0F0F0F; }
+        .kit-sidebar { background-color: #141414; }
+        .kit-canvas { background-color: #1A1A1A; }
+        .kit-summary { background-color: #141414; }
+        .tag { @apply px-2 py-1 bg-gray-100 text-[9px] font-bold uppercase tracking-wider text-gray-500; }
+    </style>
+</head>
+<body class="bg-white text-black overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="https://lavandaaudit.github.io/alfa_media_group_ltd/assets/logo.png" alt="Logo" class="h-10" onerror="this.style.display='none'">
+                <div class="flex flex-col leading-none">
+                    <span class="font-black text-xl tracking-tighter uppercase">Alfa Media Group</span>
+                    <span class="text-[8px] font-bold tracking-[0.2em] text-gray-400">EU | UK | IL | UA</span>
+                </div>
+            </div>
+            
+            <nav class="hidden xl:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+                <a href="#" class="text-black underline underline-offset-8 decoration-gold decoration-2">Home</a>
+                <a href="#" class="hover:text-black transition-colors">Services</a>
+                <a href="#" class="hover:text-black transition-colors">Industries</a>
+                <a href="#" class="hover:text-black transition-colors">Portfolio</a>
+                <a href="#" class="hover:text-black transition-colors">About Us</a>
+                <a href="#" class="hover:text-black transition-colors">Merch Builder</a>
+                <a href="#" class="hover:text-black transition-colors">Blog</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button class="px-6 py-2.5 bg-black text-white text-[11px] font-bold uppercase tracking-widest hover:bg-gold transition-all">Product List</button>
+                <div class="flex items-center gap-1 text-[10px] font-bold uppercase">
+                    <span>En</span>
+                    <i class="fa-solid fa-chevron-down text-[8px]"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-40 pb-20 px-6">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase">
+                    Premium Printing &<br>
+                    Merchandise Production<br>
+                    for <span class="text-gold">European Businesses</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-xl leading-relaxed">
+                    We help our corporate, agency and start-up partners to create high-quality, branded materials and merchandise that build trust and long-lasting impressions.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="px-10 py-5 bg-gold text-black font-black text-xs uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all shadow-xl">Explore Services</button>
+                    <button class="px-10 py-5 border-2 border-black text-black font-black text-xs uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all">Build Your Kit</button>
+                </div>
+                <!-- Trust Markers -->
+                <div class="pt-8 flex items-center gap-8 border-t border-gray-100">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Trusted in Ukraine and expanding across Europe, UK, Israel and USA</p>
+                    <div class="flex gap-4 opacity-50">
+                        <span class="text-xl">🇺🇸</span>
+                        <span class="text-xl">🇬🇧</span>
+                        <span class="text-xl">🇮🇱</span>
+                        <span class="text-xl">🇩🇪</span>
+                        <span class="text-xl">🇺🇦</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=1200" alt="Merch Set" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTION SERVICES -->
+    <section class="py-12 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-[1440px] mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <h2 class="text-2xl font-black uppercase tracking-tighter shrink-0">Our Production Services</h2>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 w-full">
+                    {[
+                        { icon: "fa-print", label: "Printing", desc: "Offset, digital, large format, UV & silk" },
+                        { icon: "fa-tshirt", label: "Merchandise", desc: "Custom apparel for events & conferences" },
+                        { icon: "fa-box", label: "Packaging", desc: "Bespoke packaging & fulfillment" },
+                        { icon: "fa-scroll", label: "Finishing", desc: "Binding, foil, custom dies & coating" },
+                        { icon: "fa-paint-brush", label: "Personalization", desc: "Corporate gifting & branding" }
+                    ].map((s, i) => (
+                        <div key={i} class="flex items-center gap-4 p-4 hover:bg-white hover:shadow-sm transition-all group cursor-pointer">
+                            <div class="w-12 h-12 flex items-center justify-center text-gray-400 group-hover:text-gold transition-colors">
+                                <i class={`fa-solid ${s.icon} text-2xl`}></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-[11px] uppercase tracking-wider">{s.label}</p>
+                                <p class="text-[9px] text-gray-400 leading-tight uppercase font-medium">{s.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="bg-black py-4 px-6 overflow-hidden relative">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between text-white grayscale opacity-50 text-[10px] uppercase font-bold tracking-[0.3em]">
+            <span>12+ Years Experience</span>
+            <span>500+ EU Clients</span>
+            <span>98.4% Quality Rating</span>
+            <span>24/7 Production Cycle</span>
+            <span>150+ Product Categories</span>
+        </div>
+    </div>
+
+    <!-- FOUR CORE INDUSTRIES -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+                <h2 class="text-7xl font-black tracking-tighter leading-none uppercase">Four Core<br>Industries</h2>
+                <p class="text-gray-400 text-sm max-w-md leading-relaxed text-right md:ml-auto">
+                    We don't build catalogues. We build platforms. Tailored for various sectors by depth, context and scale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                    { id: "01", category: "Events & Conferences", desc: "Complete branded kits for summits, trade shows and corporate events.", tags: ["Badge", "Lanyard", "Bag", "Notebook"] },
+                    { id: "02", category: "Corporate Gift", desc: "Onboarding welcome kits, premium gifting programs and employee loyalty merch.", tags: ["Hoodie", "Bottle", "Pen", "Box"] },
+                    { id: "03", category: "Marketing & Agencies", desc: "Promotional merchandise for creative campaigns, retail and brand launches.", tags: ["T-Shirt", "Stickers", "Cap", "Pen"] },
+                    { id: "04", category: "Packaging & E-commerce", desc: "Custom delivery packaging, boxes, tapes, inserts and shipping branded wraps.", tags: ["Box", "Tape", "Paper", "Wrap"] }
+                ].map((ind, i) => (
+                    <div key={i} class="group border border-gray-100 p-10 hover:border-black transition-all cursor-pointer">
+                        <div class="w-12 h-12 bg-gray-50 flex items-center justify-center text-xs font-bold mb-12 group-hover:bg-gold transition-colors">{ind.id}</div>
+                        <h3 class="text-2xl font-black uppercase tracking-tight mb-4 leading-tight">{ind.category}</h3>
+                        <p class="text-[11px] text-gray-400 leading-relaxed uppercase mb-10">{ind.desc}</p>
+                        <div class="flex flex-wrap gap-2">
+                            {ind.tags.map(t => <span key={t} class="tag">{t}</span>)}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCH BUILDER SECTION (DARK) -->
+    <section class="bg-dark-section py-24 px-6 overflow-hidden">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-gold font-bold uppercase tracking-[0.4em] text-[10px]">Configurator v4.2</span>
+                <h2 class="text-6xl font-black text-white tracking-tighter leading-none uppercase">Build Your Kit.<br><span class="text-gray-600 lowercase italic text-4xl leading-none">with your branding</span></h2>
+                <p class="text-gray-500 text-sm max-w-xl mx-auto">Select products below to verify their characteristics. Build your custom event kit in seconds.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-1 bg-[#141414] border border-white/5 shadow-2xl">
+                <!-- Left Sidebar: Selection -->
+                <div class="lg:col-span-3 kit-sidebar p-6 max-h-[700px] overflow-y-auto custom-scrollbar">
+                    <p class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] mb-6">Select Merch</p>
+                    <div class="space-y-3">
+                        {[
+                            { name: "Lanyard", icon: "fa-ribbon" },
+                            { name: "Tote Bag", icon: "fa-shopping-bag", selected: true },
+                            { name: "Notebook", icon: "fa-book" },
+                            { name: "Flat Pen", icon: "fa-pen" },
+                            { name: "T-Shirt", icon: "fa-tshirt" },
+                            { name: "Water Bottle", icon: "fa-tint" },
+                            { name: "Hoodie", icon: "fa-user-ninja" },
+                            { name: "Badges", icon: "fa-id-badge" }
+                        ].map((item, i) => (
+                            <div key={i} class={`flex items-center justify-between p-3 border transition-all cursor-pointer ${item.selected ? 'bg-gold/10 border-gold/50' : 'bg-white/5 border-white/5 hover:border-white/20'}`}>
+                                <div class="flex items-center gap-3">
+                                    <i class={`fa-solid ${item.icon} text-xs ${item.selected ? 'text-gold' : 'text-gray-500'}`}></i>
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-white">{item.name}</span>
+                                </div>
+                                <div class={`w-3 h-3 border ${item.selected ? 'bg-gold border-gold' : 'border-white/20'}`}></div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <!-- Center Canvas -->
+                <div class="lg:col-span-6 kit-canvas p-1 relative flex items-center justify-center min-h-[500px]">
+                    <div class="text-center space-y-8">
+                        <div class="grid grid-cols-3 gap-1">
+                            <div class="w-32 h-32 bg-white/5 border border-white/5"></div>
+                            <div class="w-32 h-32 bg-white/5 border border-white/5"></div>
+                            <div class="w-32 h-32 bg-white/5 border border-white/5"></div>
+                        </div>
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" alt="Bag Preview" class="w-64 max-auto border border-gold shadow-2xl">
+                            <div class="absolute -bottom-4 -right-4 bg-gold px-2 py-1 text-[10px] font-bold text-black uppercase">Canvas #01</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Summary -->
+                <div class="lg:col-span-3 kit-summary p-8">
+                    <p class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] mb-8">Quote Summary</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-[9px] font-bold uppercase tracking-wider text-gray-500 mb-2">Quantity</p>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="py-2 bg-gold text-black font-bold text-[10px]">100</button>
+                                <button class="py-2 bg-white/5 text-white font-bold text-[10px] hover:bg-white/10">250</button>
+                                <button class="py-2 bg-white/5 text-white font-bold text-[10px] hover:bg-white/10">500</button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 pt-6 mt-6 border-t border-white/5">
+                            <div class="flex justify-between items-center text-[10px] uppercase font-bold text-gray-500">
+                                <span>Subtotal</span>
+                                <span class="text-white">€3,520</span>
+                            </div>
+                            <div class="flex justify-between items-center text-[10px] uppercase font-bold text-gray-500">
+                                <span>Logo Prep</span>
+                                <span class="text-white">Included</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-4">
+                                <span class="text-[10px] uppercase font-black tracking-widest text-white">Estimated Kit</span>
+                                <span class="text-3xl font-black text-gold tracking-tighter">€3,950</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-8">
+                            <button class="w-full py-4 bg-gold text-black font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white transition-all">Download Quote (PDF)</button>
+                            <button class="w-full py-4 border border-white/20 text-white font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-black transition-all">Submit Reqest</button>
+                            <button class="w-full py-2 text-[8px] font-bold uppercase tracking-widest text-gray-600 hover:text-white transition-colors">Clear Configurator</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIAL EXCELLENCE Section -->
+    <section class="py-24 px-6 bg-white overflow-hidden">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Production Facility" class="w-full grayscale shadow-2xl">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-gold/10 -z-10"></div>
+            </div>
+            
+            <div class="space-y-12">
+                <h2 class="text-6xl font-black tracking-tighter leading-none uppercase">Industrial<br>Excellence</h2>
+                <div class="space-y-8">
+                    {[
+                        { title: "24/7 Production Cycle", text: "Working in multiple shifts to ensure the fastest delivery across Europe and Ukraine." },
+                        { title: "MUltilateral Quality Control", text: "Every batch is verified manually and electronically before dispatch." },
+                        { title: "Free Branding Audit", text: "Our designs audit your logo and suggest technical improvements for printing." },
+                        { title: "Eco-forward Materials", text: "Certified organic fabrics, recycled plastics and sustainable production methods." }
+                    ].map((idx, i) => (
+                        <div key={i} class="flex gap-6 items-start">
+                            <span class="text-gold mt-1"><i class="fa-solid fa-check-double text-xl"></i></span>
+                            <div>
+                                <h4 class="font-bold text-sm uppercase tracking-wider mb-2">{idx.title}</h4>
+                                <p class="text-gray-400 text-xs uppercase leading-relaxed font-medium">{idx.text}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTED PROJECTS -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="text-5xl font-black tracking-tighter uppercase leading-none">Selected Projects</h2>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-gold cursor-pointer hover:underline">View All Projects <i class="fa-solid fa-chevron-right ml-1"></i></p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                {[
+                    { img: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d", title: "Global Summit 2024", cat: "Conference Kit" },
+                    { img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb", title: "Tech Hub Launch", cat: "Branded Merch" },
+                    { img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72", title: "Corporate Awards", cat: "Premium Gifting" },
+                    { img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174", title: "SaaS Conference", cat: "Event Merch" },
+                    { img: "https://images.unsplash.com/photo-1556761175-b413da4baf72", title: "Eco-Summit Kit", cat: "Sustainable" }
+                ].map((p, i) => (
+                    <div key={i} class="group overflow-hidden bg-white cursor-pointer shadow-sm hover:shadow-xl transition-all">
+                        <div class="aspect-square overflow-hidden bg-gray-100 grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <img src={p.img + "?auto=format&fit=crop&q=80&w=400"} alt={p.title} class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <p class="text-[8px] font-bold uppercase text-gray-400 mb-1 tracking-widest">{p.cat}</p>
+                            <h4 class="font-bold text-[10px] uppercase tracking-wider">{p.title}</h4>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="py-24 px-6 bg-white overflow-hidden">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div class="space-y-12">
+                <h2 class="text-5xl font-black tracking-tighter uppercase leading-none">About Alfa Media Group</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xl font-medium uppercase">
+                        Alfa Media is the premium source for corporate branding, offset and digital print, 
+                        merchandise production and fulfillment. Our state-of-the-art facility is located in Ukraine, 
+                        serving partners worldwide with high-end, bespoke solutions for businesses that value excellence.
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xl font-medium uppercase">
+                        We don't just put logos on things. We build comprehensive, aesthetic systems that represent your brand in the real world. 
+                        Every item we produce is a result of meticulous engineering and design synergy.
+                    </p>
+                </div>
+                <button class="text-[10px] font-black uppercase text-black tracking-[0.3em] hover:text-gold transition-colors flex items-center gap-2">Read Our Story <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1504198453319-5ce911baf2ea?auto=format&fit=crop&q=80&w=600" class="w-full aspect-square object-cover grayscale">
+                <div class="grid grid-rows-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale">
+                    <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover grayscale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REQUEST QUOTE SECTION -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 space-y-12">
+                    <h2 class="text-7xl font-black tracking-tighter leading-[0.8] uppercase">Request a<br>Production Quote</h2>
+                    <p class="text-gray-400 text-xs uppercase leading-relaxed font-bold tracking-widest">
+                        Submit your project brief and we'll prepare a custom estimate for you within 2 business hours.
+                    </p>
+                    <div class="space-y-6 pt-12 border-t border-gray-200">
+                        <div class="flex gap-4 items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest">High-End Production</span>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest">Global Express Shipping</span>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest">Full Design Audit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8 bg-white p-12 shadow-sm border border-gray-100">
+                    <form class="grid grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label class="text-[9px] font-bold uppercase tracking-widest text-gray-400">First Name</label>
+                            <input type="text" class="w-full bg-gray-50 border border-gray-100 px-4 py-4 text-sm outline-none focus:border-gold transition-all" placeholder="John">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Last Name</label>
+                            <input type="text" class="w-full bg-gray-50 border border-gray-100 px-4 py-4 text-sm outline-none focus:border-gold transition-all" placeholder="Doe">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Corporate Email</label>
+                            <input type="email" class="w-full bg-gray-50 border border-gray-100 px-4 py-4 text-sm outline-none focus:border-gold transition-all" placeholder="name@company.com">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Phone Number</label>
+                            <input type="text" class="w-full bg-gray-50 border border-gray-100 px-4 py-4 text-sm outline-none focus:border-gold transition-all" placeholder="+380 ...">
+                        </div>
+                        <div class="col-span-2 space-y-1">
+                            <label class="text-[9px] font-bold uppercase tracking-widest text-gray-400">Project Details & Required Quantity</label>
+                            <textarea rows="4" class="w-full bg-gray-50 border border-gray-100 px-4 py-4 text-sm outline-none focus:border-gold transition-all resize-none" placeholder="Describe what you need..."></textarea>
+                        </div>
+                        <div class="col-span-2 pt-4">
+                            <button type="button" class="px-12 py-5 bg-gold text-black font-black uppercase text-xs tracking-widest hover:bg-black hover:text-white transition-all shadow-lg" onclick="alert('Thank you! Project submitted.')">Submit Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black pt-32 pb-20 px-6 overflow-hidden relative">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-20">
+            <div class="space-y-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-gold flex items-center justify-center font-black text-black">A</div>
+                    <span class="text-white font-black text-2xl tracking-tighter uppercase">Alfa Media Group</span>
+                </div>
+                <p class="text-gray-500 text-[10px] leading-relaxed uppercase font-bold tracking-widest max-w-xs">
+                    Premium European corporate printing and merchandise production for businesses that value excellence.
+                </p>
+                <div class="flex gap-4">
+                    <i class="fa-brands fa-linkedin text-xl text-gray-500 hover:text-gold transition-colors"></i>
+                    <i class="fa-brands fa-instagram text-xl text-gray-500 hover:text-gold transition-colors"></i>
+                    <i class="fa-brands fa-facebook text-xl text-gray-500 hover:text-gold transition-colors"></i>
+                </div>
+            </div>
+
+            {[
+                { title: "Services", links: ["Printing", "Merchandise", "Packaging", "Finishing", "Customization"] },
+                { title: "Company", links: ["Portfolio", "About Us", "Insights", "Newsletter"] },
+                { title: "Support", links: ["FAQ", "Terms & Conditions", "Production Cycle", "Delivery Schedule"] }
+            ].map((col, i) => (
+                <div key={i} class="space-y-10">
+                    <h4 class="text-white text-[10px] font-black uppercase tracking-[0.4em]">{col.title}</h4>
+                    <ul class="space-y-6">
+                        {col.links.map(l => (
+                            <li key={l}><a href="#" class="text-gray-500 text-[10px] uppercase font-bold tracking-widest hover:text-gold transition-colors">{l}</a></li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+
+        <div class="max-w-[1440px] mx-auto mt-32 pt-20 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-gray-600 text-[8px] font-bold uppercase tracking-[0.4em]">© 2026 Alfa Media Group Ltd. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="#" class="text-gray-600 text-[8px] font-bold uppercase tracking-[0.4em] hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-600 text-[8px] font-bold uppercase tracking-[0.4em] hover:text-white transition-colors">Cookies Settings</a>
+            </div>
+            <div class="text-gray-400 flex items-center gap-2">
+                <i class="fa-solid fa-globe text-xs opacity-50"></i>
+                <span class="text-[8px] font-bold uppercase tracking-widest">Main Server Office | Warsaw, Poland</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
